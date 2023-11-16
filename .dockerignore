@@ -1,0 +1,11 @@
+## Ignore Maven artifacts
+#target/
+#
+## Ignore build-related files
+#.DS_Store
+#.dockerignore
+#.dockerfile
+#
+## Ignore version control files
+#.git
+#.gitignore
