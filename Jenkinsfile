@@ -34,15 +34,7 @@ pipeline {
             echo 'deploying on kubernetes cluster'
             script{
                //sh "docker pull srinathsilla/studentsurveyapp:${env.BUILD_NUMBER}"
-               sh "kubectl --kubeconfig /home/ubuntu/.kube/config set image deployment/hw2-cluster container-0=srinathsilla/studentsurveyapp:${BUILD_NUMBER}"
-            }
-         }
-      }
-
-      stage('Deploying to Rancher using Load Balancer as a service') {
-         steps {
-            script{
-               sh "kubectl --kubeconfig /home/ubuntu/.kube/config set image deployment/hw2-cluster-lb container-0=srinathsilla/studentsurveyapp:${BUILD_NUMBER}"
+               sh "kubectl --kubeconfig /home/ubuntu/.kube/config set image deployment/hw3-cluster container-0=srinathsilla/studentsurveyapp:${BUILD_NUMBER}"
             }
          }
       }
